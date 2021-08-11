@@ -44,6 +44,6 @@ variable "windows_admin_username" {
 variable "windows_admin_password" {
   type = string
   default = "Oracle_11g?123"
-  description = "This variable defines the Windows admin password k8s Worker nodes"  
+  description = "This variable def the Windows admin password k8s Worker nodes"  
 }
 
