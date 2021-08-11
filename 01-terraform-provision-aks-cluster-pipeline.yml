@@ -141,7 +141,7 @@ stages:
               - task: TerraformCLI@0
                 displayName: Terraform Plan
                 inputs:
-                  command: 'plan'
+                  command: 'plan -lock=false'
                   workingDirectory: '$(Pipeline.Workspace)/terraform-manifests-out'
                   environmentServiceName: 'terraform-aks-azurerm-svc-con'
                   commandOptions: '-var ssh_public_key=$(sshkey.secureFilePath) -var environment=$(QA_ENVIRONMENT) -out $(Pipeline.Workspace)/terraform-manifests-out/$(QA_ENVIRONMENT)-$(Build.BuildId).out'
